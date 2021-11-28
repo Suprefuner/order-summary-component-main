@@ -110,9 +110,7 @@
 
       .plan {
         display: flex;
-        align-items: center;
         justify-content: flex-start;
-        background-color: green;
       }
 
       .plan-sec a:hover {
@@ -123,7 +121,7 @@
       .plan .txt {
         display: flex;
         flex-direction: column;
-        background-color: red;
+        justify-content: space-evenly;
       }
 
       .plan p {
@@ -167,7 +165,28 @@
       }
 
       .cancel-btn:hover {
-        color: var(--primary-brightBlue);
+        color: var(--neutral-darkBlue);
+      }
+
+      @media screen and (max-width: 375px) {
+        body {
+          background: no-repeat url("images/pattern-background-mobile.svg") top
+            center var(--primary-paleBlue);
+        }
+
+        .card {
+          width: 80%;
+          min-width: 18rem;
+          margin: 0 auto 2rem;
+        }
+
+        .hero {
+          height: 150px;
+        }
+
+        .content {
+          padding: 2rem 1.2rem;
+        }
       }
     </style>
   </head>
