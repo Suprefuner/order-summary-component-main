@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+      :root {
+        --primary-paleBlue: hsl(225, 100%, 94%);
+        --primary-brightBlue: hsl(245, 75%, 52%);
+
+        --neutral-veryPaleBlue: hsl(225, 100%, 98%);
+        --neutral-desatBlue: hsl(224, 23%, 55%);
+        --neutral-darkBlue: hsl(223, 47%, 23%);
+
+        --border-radius: 15px;
+
+        --fw-regular: 500;
+        --fw-bold: 700;
+        --fw-exbold: 900;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Red Hat Display", sans-serif;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: no-repeat url("images/pattern-background-desktop.svg")
+          var(--primary-paleBlue);
+      }
+
+      .card {
+        text-align: center;
+        box-sizing: border-box;
+        width: 23rem;
+        background-color: white;
+        margin-bottom: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 20px 15px -5px hsl(224 23% 55%/0.5);
+      }
+
+      .hero {
+        width: 100%;
+        height: 200px;
+        background: url("images/illustration-hero.svg") center / cover;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+      }
+
+      .content {
+        padding: 2rem;
+      }
+
+      .section + .section {
+        margin-top: 1.5rem;
+      }
+
+      .title-sec {
+        color: var(--neutral-desatBlue);
+        padding: 0 1rem;
+      }
+
+      h2 {
+        font-weight: var(--fw-exbold);
+        color: var(--neutral-darkBlue);
+        margin-bottom: 1rem;
+      }
+
+      .title-sec p {
+        font-size: 0.9rem;
+      }
+
+      .plan-sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        padding: 1rem;
+        background-color: var(--neutral-veryPaleBlue);
+        border-radius: var(--border-radius);
+      }
+
+      .plan {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: green;
+      }
+
+      .plan-sec a:hover {
+        color: var(--neutral-desatBlue);
+        text-decoration: none;
+      }
+
+      .plan .txt {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+      }
+
+      .plan p {
+        margin-left: 1rem;
+        color: var(--neutral-desatBlue);
+      }
+
+      .plan span {
+        font-weight: var(--fw-exbold);
+        color: var(--neutral-darkBlue);
+      }
+
+      button {
+        width: 100%;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--primary-brightBlue);
+        color: var(--primary-paleBlue);
+        padding: 0.7rem;
+        font-weight: var(--fw-exbold);
+        cursor: pointer;
+      }
+
+      button + button {
+        margin-top: 0.5rem;
+      }
+
+      .pay-btn {
+        box-shadow: 0 10px 10px 0px hsl(224 23% 55%/0.3);
+        z-index: 2;
+        isolation: isolate;
+      }
+
+      .pay-btn:hover {
+        background-color: var(--neutral-desatBlue);
+      }
+
+      .cancel-btn {
+        background-color: white;
+        color: var(--neutral-desatBlue);
+      }
+
+      .cancel-btn:hover {
+        color: var(--primary-brightBlue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="hero"></div>
+        <div class="content">
+          <div class="title-sec section">
+            <h2>Order Summary</h2>
+            <p>
+              You can now listen to millions of songs, audiobooks, and podcasts
+              on any device anywhere you like!
+            </p>
+          </div>
+          <div class="plan-sec section">
+            <div class="plan">
+              <img src="\images\icon-music.svg" alt="" />
+              <div class="txt">
+                <p><span> Annual Plan</span></p>
+                <p>$59.99/year</p>
+              </div>
+            </div>
+            <a href="#">Change</a>
+          </div>
+          <div class="button-sec section">
+            <button class="pay-btn">Proceed to Payment</button>
+            <button class="cancel-btn">Cancel Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joe Jai</a>.
+    </div>
+  </body>
+</html>
